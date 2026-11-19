@@ -13,7 +13,7 @@ use FacebookAds\ApiRequest;
 use FacebookAds\Cursor;
 use FacebookAds\Http\RequestInterface;
 use FacebookAds\TypeChecker;
-use FacebookAds\Object\Fields\ExternalMerchantSettingsFields;
+use FacebookAds\Object\Fields\AssignedAdAccountsFields;
 
 /**
  * This class is auto-generated.
@@ -24,13 +24,13 @@ use FacebookAds\Object\Fields\ExternalMerchantSettingsFields;
  *
  */
 
-class ExternalMerchantSettings extends AbstractCrudObject {
+class AssignedAdAccounts extends AbstractCrudObject {
 
   /**
-   * @return ExternalMerchantSettingsFields
+   * @return AssignedAdAccountsFields
    */
   public static function getFieldsEnum() {
-    return ExternalMerchantSettingsFields::getInstance();
+    return AssignedAdAccountsFields::getInstance();
   }
 
   protected static function getReferencedEnums() {
@@ -39,10 +39,16 @@ class ExternalMerchantSettings extends AbstractCrudObject {
   }
 
 
-  public function getSelf(array $fields = array(), array $params = array(), $pending = false) {
+  public function genget(array $fields = array(), array $params = array(), $pending = false) {
     $this->assureId();
 
     $param_types = array(
+      'after' => 'string',
+      'before' => 'string',
+      'fields' => 'string',
+      'filtering' => 'string',
+      'limit' => 'int',
+      'summary' => 'string',
     );
     $enums = array(
     );
@@ -51,10 +57,10 @@ class ExternalMerchantSettings extends AbstractCrudObject {
       $this->api,
       $this->data['id'],
       RequestInterface::METHOD_GET,
-      '/',
-      new ExternalMerchantSettings(),
-      'NODE',
-      ExternalMerchantSettings::getFieldsEnum()->getValues(),
+      '/assigned_ad_accounts',
+      new AssignedAdAccountsGet(),
+      'EDGE',
+      AssignedAdAccountsGet::getFieldsEnum()->getValues(),
       new TypeChecker($param_types, $enums)
     );
     $request->addParams($params);

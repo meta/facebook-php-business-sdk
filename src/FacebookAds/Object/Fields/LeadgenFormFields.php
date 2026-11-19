@@ -39,6 +39,7 @@ class LeadgenFormFields extends AbstractEnum {
   const ORGANIC_LEADS_COUNT = 'organic_leads_count';
   const PAGE = 'page';
   const PAGE_ID = 'page_id';
+  const PHONE_OTP_VERIFICATION_TYPE = 'phone_otp_verification_type';
   const PRIVACY_POLICY_URL = 'privacy_policy_url';
   const QUESTION_PAGE_CUSTOM_HEADLINE = 'question_page_custom_headline';
   const QUESTIONS = 'questions';
@@ -65,6 +66,7 @@ class LeadgenFormFields extends AbstractEnum {
       'organic_leads_count' => 'unsigned int',
       'page' => 'Page',
       'page_id' => 'string',
+      'phone_otp_verification_type' => 'string',
       'privacy_policy_url' => 'string',
       'question_page_custom_headline' => 'string',
       'questions' => 'list<LeadGenQuestion>',

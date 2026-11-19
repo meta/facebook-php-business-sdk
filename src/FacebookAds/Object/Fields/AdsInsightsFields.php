@@ -77,7 +77,6 @@ class AdsInsightsFields extends AbstractEnum {
   const CONFIGURABLE_PLACEMENT_PTC_CONVERTERS = 'configurable_placement_ptc_converters';
   const CONFIGURABLE_PLACEMENT_PTC_REACH = 'configurable_placement_ptc_reach';
   const CONFIGURABLE_REACHBYFREQUENCY_ACTION = 'configurable_reachbyfrequency_action';
-  const CONFIGURABLE_REACHBYFREQUENCY_CONVERTERS_COUNT = 'configurable_reachbyfrequency_converters_count';
   const CONFIGURABLE_REACHBYFREQUENCY_IMPRESSIONS_COST = 'configurable_reachbyfrequency_impressions_cost';
   const CONFIGURABLE_REACHBYFREQUENCY_IMPRESSIONS_COUNT = 'configurable_reachbyfrequency_impressions_count';
   const CONFIGURABLE_REACHBYFREQUENCY_REACH = 'configurable_reachbyfrequency_reach';
@@ -318,7 +317,6 @@ class AdsInsightsFields extends AbstractEnum {
       'configurable_placement_ptc_converters' => 'string',
       'configurable_placement_ptc_reach' => 'string',
       'configurable_reachbyfrequency_action' => 'list<AdsActionStats>',
-      'configurable_reachbyfrequency_converters_count' => 'string',
       'configurable_reachbyfrequency_impressions_cost' => 'string',
       'configurable_reachbyfrequency_impressions_count' => 'string',
       'configurable_reachbyfrequency_reach' => 'string',

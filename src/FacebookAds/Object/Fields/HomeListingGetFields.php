@@ -53,6 +53,8 @@ class HomeListingGetFields extends AbstractEnum {
   const CUSTOM_NUMBER_3 = 'custom_number_3';
   const CUSTOM_NUMBER_4 = 'custom_number_4';
   const DAYS_ON_MARKET = 'days_on_market';
+  const DEFAULT_COUNTRY = 'default_country';
+  const DEFAULT_LANGUAGE_LOCALE = 'default_language_locale';
   const DESCRIPTION = 'description';
   const ENABLED_CAPABILITY_TO_REVIEW_STATUS = 'enabled_capability_to_review_status';
   const ENERGY_RATING_EU = 'energy_rating_eu';
@@ -128,6 +130,8 @@ class HomeListingGetFields extends AbstractEnum {
       'custom_number_3' => 'int',
       'custom_number_4' => 'int',
       'days_on_market' => 'int',
+      'default_country' => 'string',
+      'default_language_locale' => 'string',
       'description' => 'string',
       'enabled_capability_to_review_status' => 'list<object>',
       'energy_rating_eu' => 'object',

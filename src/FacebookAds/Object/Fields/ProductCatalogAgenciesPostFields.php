@@ -20,15 +20,15 @@ use FacebookAds\Enum\AbstractEnum;
  *
  */
 
-class WorkSkillFields extends AbstractEnum {
+class ProductCatalogAgenciesPostFields extends AbstractEnum {
 
-  const ID = 'id';
-  const NAME = 'name';
+  const __FIRSTONEOF = '__firstOneOf';
+  const __SECONDONEOF = '__secondOneOf';
 
   public function getFieldTypes() {
     return array(
-      'id' => 'string',
-      'name' => 'string',
+      '__firstOneOf' => 'object',
+      '__secondOneOf' => 'object',
     );
   }
 }

@@ -13,7 +13,7 @@ use FacebookAds\ApiRequest;
 use FacebookAds\Cursor;
 use FacebookAds\Http\RequestInterface;
 use FacebookAds\TypeChecker;
-use FacebookAds\Object\Fields\WhatsAppPaymentCapabilitiesFields;
+use FacebookAds\Object\Fields\BusinessClientProductCatalogsGetFields;
 
 /**
  * This class is auto-generated.
@@ -24,13 +24,13 @@ use FacebookAds\Object\Fields\WhatsAppPaymentCapabilitiesFields;
  *
  */
 
-class WhatsAppPaymentCapabilities extends AbstractObject {
+class BusinessClientProductCatalogsGet extends AbstractObject {
 
   /**
-   * @return WhatsAppPaymentCapabilitiesFields
+   * @return BusinessClientProductCatalogsGetFields
    */
   public static function getFieldsEnum() {
-    return WhatsAppPaymentCapabilitiesFields::getInstance();
+    return BusinessClientProductCatalogsGetFields::getInstance();
   }
 
   protected static function getReferencedEnums() {

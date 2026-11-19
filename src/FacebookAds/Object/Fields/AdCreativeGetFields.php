@@ -25,6 +25,7 @@ class AdCreativeGetFields extends AbstractEnum {
   const ACCOUNT_ID = 'account_id';
   const ACTOR_ID = 'actor_id';
   const ACTOR_TYPE = 'actor_type';
+  const AD_DISCLAIMER_SPEC = 'ad_disclaimer_spec';
   const ADLABELS = 'adlabels';
   const APPLINK_TREATMENT = 'applink_treatment';
   const ASSET_FEED_SPEC = 'asset_feed_spec';
@@ -63,6 +64,7 @@ class AdCreativeGetFields extends AbstractEnum {
   const INTERACTIVE_COMPONENTS_SPEC = 'interactive_components_spec';
   const LINK_OG_ID = 'link_og_id';
   const LINK_URL = 'link_url';
+  const MARKETING_MESSAGE_STRUCTURED_SPEC = 'marketing_message_structured_spec';
   const MEDIA_SOURCING_SPEC = 'media_sourcing_spec';
   const MEDIA_TYPE = 'media_type';
   const NAME = 'name';
@@ -81,10 +83,12 @@ class AdCreativeGetFields extends AbstractEnum {
   const PLAYABLE_ASSET_ID = 'playable_asset_id';
   const PORTRAIT_CUSTOMIZATIONS = 'portrait_customizations';
   const PRODUCT_SET_ID = 'product_set_id';
+  const PRODUCT_SUGGESTION_SETTINGS = 'product_suggestion_settings';
   const RECOMMENDER_SETTINGS = 'recommender_settings';
   const REGIONAL_REGULATION_DISCLAIMER_SPEC = 'regional_regulation_disclaimer_spec';
   const SOURCE_FACEBOOK_POST_ID = 'source_facebook_post_id';
   const SOURCE_INSTAGRAM_MEDIA_ID = 'source_instagram_media_id';
+  const SOURCE_THREADS_MEDIA_ID = 'source_threads_media_id';
   const STATUS = 'status';
   const TEMPLATE_URL = 'template_url';
   const TEMPLATE_URL_SPEC = 'template_url_spec';
@@ -98,12 +102,14 @@ class AdCreativeGetFields extends AbstractEnum {
   const USE_PAGE_ACTOR_OVERRIDE = 'use_page_actor_override';
   const VIDEO_ID = 'video_id';
   const VISUAL_HASH = 'visual_hash';
+  const WAMO_WHATSAPP_IDENTITY_SPEC = 'wamo_whatsapp_identity_spec';
 
   public function getFieldTypes() {
     return array(
       'account_id' => 'string',
       'actor_id' => 'int',
       'actor_type' => 'ActorType',
+      'ad_disclaimer_spec' => 'object',
       'adlabels' => 'list<object>',
       'applink_treatment' => 'ApplinkTreatment',
       'asset_feed_spec' => 'object',
@@ -142,6 +148,7 @@ class AdCreativeGetFields extends AbstractEnum {
       'interactive_components_spec' => 'object',
       'link_og_id' => 'int',
       'link_url' => 'string',
+      'marketing_message_structured_spec' => 'object',
       'media_sourcing_spec' => 'object',
       'media_type' => 'MediaType',
       'name' => 'string',
@@ -160,10 +167,12 @@ class AdCreativeGetFields extends AbstractEnum {
       'playable_asset_id' => 'int',
       'portrait_customizations' => 'object',
       'product_set_id' => 'int',
+      'product_suggestion_settings' => 'object',
       'recommender_settings' => 'object',
       'regional_regulation_disclaimer_spec' => 'object',
       'source_facebook_post_id' => 'int',
       'source_instagram_media_id' => 'int',
+      'source_threads_media_id' => 'int',
       'status' => 'string',
       'template_url' => 'string',
       'template_url_spec' => 'object',
@@ -177,6 +186,7 @@ class AdCreativeGetFields extends AbstractEnum {
       'use_page_actor_override' => 'bool',
       'video_id' => 'int',
       'visual_hash' => 'int',
+      'wamo_whatsapp_identity_spec' => 'object',
     );
   }
 }

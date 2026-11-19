@@ -23,7 +23,6 @@ use FacebookAds\Enum\AbstractEnum;
 class AdCampaignLearningStageInfoFields extends AbstractEnum {
 
   const ATTRIBUTION_WINDOWS = 'attribution_windows';
-  const CAS_SEGMENT = 'cas_segment';
   const CONVERSIONS = 'conversions';
   const CURRENT_BUDGET_PREDICTION = 'current_budget_prediction';
   const DYNAMIC_LP_CONVERSIONS_THRESHOLD = 'dynamic_lp_conversions_threshold';
@@ -38,7 +37,6 @@ class AdCampaignLearningStageInfoFields extends AbstractEnum {
   public function getFieldTypes() {
     return array(
       'attribution_windows' => 'list<string>',
-      'cas_segment' => 'string',
       'conversions' => 'unsigned int',
       'current_budget_prediction' => 'Object',
       'dynamic_lp_conversions_threshold' => 'unsigned int',

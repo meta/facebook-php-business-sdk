@@ -15,6 +15,7 @@ use FacebookAds\Http\RequestInterface;
 use FacebookAds\TypeChecker;
 use FacebookAds\Object\Fields\LeadgenFormFields;
 use FacebookAds\Object\Values\LeadgenFormLocaleValues;
+use FacebookAds\Object\Values\LeadgenFormPhoneOtpVerificationTypeValues;
 use FacebookAds\Object\Values\LeadgenFormStatusValues;
 
 /**
@@ -46,6 +47,7 @@ class LeadgenForm extends AbstractCrudObject {
     $ref_enums = array();
     $ref_enums['Status'] = LeadgenFormStatusValues::getInstance()->getValues();
     $ref_enums['Locale'] = LeadgenFormLocaleValues::getInstance()->getValues();
+    $ref_enums['PhoneOtpVerificationType'] = LeadgenFormPhoneOtpVerificationTypeValues::getInstance()->getValues();
     return $ref_enums;
   }
 

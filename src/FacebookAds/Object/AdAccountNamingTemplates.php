@@ -13,7 +13,7 @@ use FacebookAds\ApiRequest;
 use FacebookAds\Cursor;
 use FacebookAds\Http\RequestInterface;
 use FacebookAds\TypeChecker;
-use FacebookAds\Object\Fields\WorkSkillFields;
+use FacebookAds\Object\Fields\AdAccountNamingTemplatesFields;
 
 /**
  * This class is auto-generated.
@@ -24,13 +24,13 @@ use FacebookAds\Object\Fields\WorkSkillFields;
  *
  */
 
-class WorkSkill extends AbstractCrudObject {
+class AdAccountNamingTemplates extends AbstractCrudObject {
 
   /**
-   * @return WorkSkillFields
+   * @return AdAccountNamingTemplatesFields
    */
   public static function getFieldsEnum() {
-    return WorkSkillFields::getInstance();
+    return AdAccountNamingTemplatesFields::getInstance();
   }
 
   protected static function getReferencedEnums() {
@@ -39,7 +39,7 @@ class WorkSkill extends AbstractCrudObject {
   }
 
 
-  public function getUsers(array $fields = array(), array $params = array(), $pending = false) {
+  public function genpost(array $fields = array(), array $params = array(), $pending = false) {
     $this->assureId();
 
     $param_types = array(
@@ -50,34 +50,11 @@ class WorkSkill extends AbstractCrudObject {
     $request = new ApiRequest(
       $this->api,
       $this->data['id'],
-      RequestInterface::METHOD_GET,
-      '/users',
-      new User(),
+      RequestInterface::METHOD_POST,
+      '/naming_templates',
+      new AdAccountNamingTemplatesPost(),
       'EDGE',
-      User::getFieldsEnum()->getValues(),
-      new TypeChecker($param_types, $enums)
-    );
-    $request->addParams($params);
-    $request->addFields($fields);
-    return $pending ? $request : $request->execute();
-  }
-
-  public function getSelf(array $fields = array(), array $params = array(), $pending = false) {
-    $this->assureId();
-
-    $param_types = array(
-    );
-    $enums = array(
-    );
-
-    $request = new ApiRequest(
-      $this->api,
-      $this->data['id'],
-      RequestInterface::METHOD_GET,
-      '/',
-      new WorkSkill(),
-      'NODE',
-      WorkSkill::getFieldsEnum()->getValues(),
+      AdAccountNamingTemplatesPost::getFieldsEnum()->getValues(),
       new TypeChecker($param_types, $enums)
     );
     $request->addParams($params);

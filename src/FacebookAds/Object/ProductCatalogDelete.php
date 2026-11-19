@@ -13,7 +13,7 @@ use FacebookAds\ApiRequest;
 use FacebookAds\Cursor;
 use FacebookAds\Http\RequestInterface;
 use FacebookAds\TypeChecker;
-use FacebookAds\Object\Fields\AdsPixelDeliveryRecommendationsFields;
+use FacebookAds\Object\Fields\ProductCatalogDeleteFields;
 
 /**
  * This class is auto-generated.
@@ -24,13 +24,13 @@ use FacebookAds\Object\Fields\AdsPixelDeliveryRecommendationsFields;
  *
  */
 
-class AdsPixelDeliveryRecommendations extends AbstractObject {
+class ProductCatalogDelete extends AbstractObject {
 
   /**
-   * @return AdsPixelDeliveryRecommendationsFields
+   * @return ProductCatalogDeleteFields
    */
   public static function getFieldsEnum() {
-    return AdsPixelDeliveryRecommendationsFields::getInstance();
+    return ProductCatalogDeleteFields::getInstance();
   }
 
   protected static function getReferencedEnums() {

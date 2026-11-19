@@ -19,11 +19,6 @@ use FacebookAds\Object\Values\EventEventStateFilterValues;
 use FacebookAds\Object\Values\EventOnlineEventFormatValues;
 use FacebookAds\Object\Values\EventTimeFilterValues;
 use FacebookAds\Object\Values\EventTypeValues;
-use FacebookAds\Object\Values\LiveVideoProjectionValues;
-use FacebookAds\Object\Values\LiveVideoSpatialAudioFormatValues;
-use FacebookAds\Object\Values\LiveVideoStatusValues;
-use FacebookAds\Object\Values\LiveVideoStereoscopicModeValues;
-use FacebookAds\Object\Values\LiveVideoStreamTypeValues;
 
 /**
  * This class is auto-generated.
@@ -149,11 +144,31 @@ class Event extends AbstractCrudObject {
       'title' => 'string',
     );
     $enums = array(
-      'projection_enum' => LiveVideoProjectionValues::getInstance()->getValues(),
-      'spatial_audio_format_enum' => LiveVideoSpatialAudioFormatValues::getInstance()->getValues(),
-      'status_enum' => LiveVideoStatusValues::getInstance()->getValues(),
-      'stereoscopic_mode_enum' => LiveVideoStereoscopicModeValues::getInstance()->getValues(),
-      'stream_type_enum' => LiveVideoStreamTypeValues::getInstance()->getValues(),
+      'projection_enum' => array(
+        'CUBEMAP',
+        'EQUIRECTANGULAR',
+        'HALF_EQUIRECTANGULAR',
+      ),
+      'spatial_audio_format_enum' => array(
+        'ambiX_4',
+      ),
+      'status_enum' => array(
+        'LIVE_NOW',
+        'SCHEDULED_CANCELED',
+        'SCHEDULED_LIVE',
+        'SCHEDULED_UNPUBLISHED',
+        'UNPUBLISHED',
+      ),
+      'stereoscopic_mode_enum' => array(
+        'LEFT_RIGHT',
+        'MONO',
+        'MULTI_VIEW',
+        'TOP_BOTTOM',
+      ),
+      'stream_type_enum' => array(
+        'AMBIENT',
+        'REGULAR',
+      ),
     );
 
     $request = new ApiRequest(
@@ -161,9 +176,9 @@ class Event extends AbstractCrudObject {
       $this->data['id'],
       RequestInterface::METHOD_POST,
       '/live_videos',
-      new LiveVideo(),
+      new AbstractCrudObject(),
       'EDGE',
-      LiveVideo::getFieldsEnum()->getValues(),
+      array(),
       new TypeChecker($param_types, $enums)
     );
     $request->addParams($params);

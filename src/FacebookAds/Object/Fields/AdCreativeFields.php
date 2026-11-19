@@ -90,6 +90,7 @@ class AdCreativeFields extends AbstractEnum {
   const REGIONAL_REGULATION_DISCLAIMER_SPEC = 'regional_regulation_disclaimer_spec';
   const SOURCE_FACEBOOK_POST_ID = 'source_facebook_post_id';
   const SOURCE_INSTAGRAM_MEDIA_ID = 'source_instagram_media_id';
+  const SOURCE_THREADS_MEDIA_ID = 'source_threads_media_id';
   const STATUS = 'status';
   const TEMPLATE_URL = 'template_url';
   const TEMPLATE_URL_SPEC = 'template_url_spec';
@@ -175,6 +176,7 @@ class AdCreativeFields extends AbstractEnum {
       'regional_regulation_disclaimer_spec' => 'AdCreativeRegionalRegulationDisclaimer',
       'source_facebook_post_id' => 'string',
       'source_instagram_media_id' => 'string',
+      'source_threads_media_id' => 'string',
       'status' => 'Status',
       'template_url' => 'string',
       'template_url_spec' => 'AdCreativeTemplateURLSpec',

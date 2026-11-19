@@ -20,15 +20,13 @@ use FacebookAds\Enum\AbstractEnum;
  *
  */
 
-class WhatsAppPaymentCapabilitiesFields extends AbstractEnum {
+class AssignedProductCatalogsFields extends AbstractEnum {
 
-  const IS_ENABLED = 'is_enabled';
-  const PAYMENT_CAPABILITY_DETAILS = 'payment_capability_details';
+  const ID = 'id';
 
   public function getFieldTypes() {
     return array(
-      'is_enabled' => 'bool',
-      'payment_capability_details' => 'list<Object>',
+      'id' => 'string',
     );
   }
 }

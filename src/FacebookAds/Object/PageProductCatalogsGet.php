@@ -13,7 +13,7 @@ use FacebookAds\ApiRequest;
 use FacebookAds\Cursor;
 use FacebookAds\Http\RequestInterface;
 use FacebookAds\TypeChecker;
-use FacebookAds\Object\Fields\ProductCatalogPostFields;
+use FacebookAds\Object\Fields\PageProductCatalogsGetFields;
 
 /**
  * This class is auto-generated.
@@ -24,13 +24,13 @@ use FacebookAds\Object\Fields\ProductCatalogPostFields;
  *
  */
 
-class ProductCatalogPost extends AbstractObject {
+class PageProductCatalogsGet extends AbstractObject {
 
   /**
-   * @return ProductCatalogPostFields
+   * @return PageProductCatalogsGetFields
    */
   public static function getFieldsEnum() {
-    return ProductCatalogPostFields::getInstance();
+    return PageProductCatalogsGetFields::getInstance();
   }
 
   protected static function getReferencedEnums() {

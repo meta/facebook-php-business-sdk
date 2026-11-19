@@ -20,15 +20,15 @@ use FacebookAds\Enum\AbstractEnum;
  *
  */
 
-class ProductCatalogPostFields extends AbstractEnum {
+class PageProductCatalogsGetFields extends AbstractEnum {
 
-  const __FIRSTONEOF = '__firstOneOf';
-  const __SECONDONEOF = '__secondOneOf';
+  const DATA = 'data';
+  const PAGING = 'paging';
 
   public function getFieldTypes() {
     return array(
-      '__firstOneOf' => 'object',
-      '__secondOneOf' => 'object',
+      'data' => 'list<object>',
+      'paging' => 'object',
     );
   }
 }

@@ -20,16 +20,12 @@ use FacebookAds\Enum\AbstractEnum;
  *
  */
 
-class ExternalMerchantSettingsFields extends AbstractEnum {
+class BusinessOwnedProductCatalogsFields extends AbstractEnum {
 
-  const CONNECT_WOO = 'connect_woo';
-  const EXTERNAL_PLATFORM = 'external_platform';
   const ID = 'id';
 
   public function getFieldTypes() {
     return array(
-      'connect_woo' => 'string',
-      'external_platform' => 'string',
       'id' => 'string',
     );
   }

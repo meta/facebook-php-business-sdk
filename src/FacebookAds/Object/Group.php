@@ -22,7 +22,6 @@ use FacebookAds\Object\Values\AdVideoSwapModeValues;
 use FacebookAds\Object\Values\AdVideoTypeValues;
 use FacebookAds\Object\Values\AdVideoUnpublishedContentTypeValues;
 use FacebookAds\Object\Values\AdVideoUploadPhaseValues;
-use FacebookAds\Object\Values\GroupGroupTypeValues;
 use FacebookAds\Object\Values\GroupJoinSettingValues;
 use FacebookAds\Object\Values\GroupPostPermissionsValues;
 use FacebookAds\Object\Values\GroupPurposeValues;
@@ -67,7 +66,6 @@ class Group extends AbstractCrudObject {
     $ref_enums['JoinSetting'] = GroupJoinSettingValues::getInstance()->getValues();
     $ref_enums['PostPermissions'] = GroupPostPermissionsValues::getInstance()->getValues();
     $ref_enums['Purpose'] = GroupPurposeValues::getInstance()->getValues();
-    $ref_enums['GroupType'] = GroupGroupTypeValues::getInstance()->getValues();
     return $ref_enums;
   }
 
@@ -388,43 +386,6 @@ class Group extends AbstractCrudObject {
       $this->api,
       $this->data['id'],
       RequestInterface::METHOD_GET,
-      '/groups',
-      new Group(),
-      'EDGE',
-      Group::getFieldsEnum()->getValues(),
-      new TypeChecker($param_types, $enums)
-    );
-    $request->addParams($params);
-    $request->addFields($fields);
-    return $pending ? $request : $request->execute();
-  }
-
-  public function createGroup(array $fields = array(), array $params = array(), $pending = false) {
-    $this->assureId();
-
-    $param_types = array(
-      'admin' => 'int',
-      'description' => 'string',
-      'group_icon_id' => 'string',
-      'group_type' => 'group_type_enum',
-      'join_setting' => 'join_setting_enum',
-      'name' => 'string',
-      'parent_id' => 'string',
-      'post_permissions' => 'post_permissions_enum',
-      'post_requires_admin_approval' => 'bool',
-      'privacy' => 'string',
-      'ref' => 'string',
-    );
-    $enums = array(
-      'group_type_enum' => GroupGroupTypeValues::getInstance()->getValues(),
-      'join_setting_enum' => GroupJoinSettingValues::getInstance()->getValues(),
-      'post_permissions_enum' => GroupPostPermissionsValues::getInstance()->getValues(),
-    );
-
-    $request = new ApiRequest(
-      $this->api,
-      $this->data['id'],
-      RequestInterface::METHOD_POST,
       '/groups',
       new Group(),
       'EDGE',

@@ -22,12 +22,16 @@ use FacebookAds\Enum\AbstractEnum;
 
 class LiveVideoAdCampaignConfigFields extends AbstractEnum {
 
+  const DECLARED_LIVE_SECONDS = 'declared_live_seconds';
   const ID = 'id';
+  const LIVE_CADENCE = 'live_cadence';
   const LIVE_VIDEO_AD_TYPE = 'live_video_ad_type';
 
   public function getFieldTypes() {
     return array(
+      'declared_live_seconds' => 'unsigned int',
       'id' => 'string',
+      'live_cadence' => 'string',
       'live_video_ad_type' => 'string',
     );
   }

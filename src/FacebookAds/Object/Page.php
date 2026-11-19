@@ -32,6 +32,7 @@ use FacebookAds\Object\Values\ImageCopyrightGeoOwnershipValues;
 use FacebookAds\Object\Values\InsightsResultDatePresetValues;
 use FacebookAds\Object\Values\InsightsResultPeriodValues;
 use FacebookAds\Object\Values\LeadgenFormLocaleValues;
+use FacebookAds\Object\Values\LeadgenFormPhoneOtpVerificationTypeValues;
 use FacebookAds\Object\Values\LiveVideoBroadcastStatusValues;
 use FacebookAds\Object\Values\LiveVideoProjectionValues;
 use FacebookAds\Object\Values\LiveVideoSourceValues;
@@ -1659,6 +1660,7 @@ class Page extends AbstractCrudObject {
     $this->assureId();
 
     $param_types = array(
+      'ad_account_id' => 'unsigned int',
       'allow_organic_lead_retrieval' => 'bool',
       'block_display_for_non_targeted_viewer' => 'bool',
       'context_card' => 'Object',
@@ -1671,6 +1673,7 @@ class Page extends AbstractCrudObject {
       'is_phone_sms_verify_enabled' => 'bool',
       'locale' => 'locale_enum',
       'name' => 'string',
+      'phone_otp_verification_type' => 'phone_otp_verification_type_enum',
       'privacy_policy' => 'Object',
       'question_page_custom_headline' => 'string',
       'questions' => 'list<Object>',
@@ -1681,6 +1684,7 @@ class Page extends AbstractCrudObject {
     );
     $enums = array(
       'locale_enum' => LeadgenFormLocaleValues::getInstance()->getValues(),
+      'phone_otp_verification_type_enum' => LeadgenFormPhoneOtpVerificationTypeValues::getInstance()->getValues(),
     );
 
     $request = new ApiRequest(

@@ -20,15 +20,17 @@ use FacebookAds\Enum\AbstractEnum;
  *
  */
 
-class AdsPixelDeliveryRecommendationsFields extends AbstractEnum {
+class BusinessClientProductCatalogsGetFields extends AbstractEnum {
 
-  const CUSTOM_EVENT_TYPE = 'custom_event_type';
-  const OPTIMIZATION_GOAL = 'optimization_goal';
+  const DATA = 'data';
+  const PAGING = 'paging';
+  const SUMMARY = 'summary';
 
   public function getFieldTypes() {
     return array(
-      'custom_event_type' => 'string',
-      'optimization_goal' => 'string',
+      'data' => 'list<object>',
+      'paging' => 'object',
+      'summary' => 'object',
     );
   }
 }

@@ -730,7 +730,6 @@ class AdSet extends AbstractArchivableCrudObject
       'lifetime_spend_cap' => 'unsigned int',
       'live_video_ad_campaign_config' => 'Object',
       'max_budget_spend_percentage' => 'unsigned int',
-      'meta_moment_maker_spec' => 'map',
       'min_budget_spend_percentage' => 'unsigned int',
       'multi_event_conversion_attribution_window_seconds' => 'unsigned int',
       'multi_optimization_goal_weight' => 'multi_optimization_goal_weight_enum',

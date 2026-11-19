@@ -284,33 +284,6 @@ class ProductCatalog extends AbstractCrudObject {
     return $pending ? $request : $request->execute();
   }
 
-  public function createBatch(array $fields = array(), array $params = array(), $pending = false) {
-    $this->assureId();
-
-    $param_types = array(
-      'allow_upsert' => 'bool',
-      'fbe_external_business_id' => 'string',
-      'requests' => 'list<map>',
-      'version' => 'unsigned int',
-    );
-    $enums = array(
-    );
-
-    $request = new ApiRequest(
-      $this->api,
-      $this->data['id'],
-      RequestInterface::METHOD_POST,
-      '/batch',
-      new ProductItem(),
-      'EDGE',
-      ProductItem::getFieldsEnum()->getValues(),
-      new TypeChecker($param_types, $enums)
-    );
-    $request->addParams($params);
-    $request->addFields($fields);
-    return $pending ? $request : $request->execute();
-  }
-
   public function createCatalogStore(array $fields = array(), array $params = array(), $pending = false) {
     $this->assureId();
 

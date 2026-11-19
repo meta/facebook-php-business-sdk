@@ -78,7 +78,6 @@ class AdSetFields extends AbstractEnum {
   const LIVE_VIDEO_AD_CAMPAIGN_CONFIG = 'live_video_ad_campaign_config';
   const LOW_CREATIVE_REACH = 'low_creative_reach';
   const MAX_BUDGET_SPEND_PERCENTAGE = 'max_budget_spend_percentage';
-  const META_MOMENT_MAKER_SPEC = 'meta_moment_maker_spec';
   const MIN_BUDGET_SPEND_PERCENTAGE = 'min_budget_spend_percentage';
   const MULTI_EVENT_CONVERSION_ATTRIBUTION_WINDOW_SECONDS = 'multi_event_conversion_attribution_window_seconds';
   const MULTI_OPTIMIZATION_GOAL_WEIGHT = 'multi_optimization_goal_weight';
@@ -168,7 +167,6 @@ class AdSetFields extends AbstractEnum {
       'live_video_ad_campaign_config' => 'LiveVideoAdCampaignConfig',
       'low_creative_reach' => 'list<string>',
       'max_budget_spend_percentage' => 'string',
-      'meta_moment_maker_spec' => 'MetaMomentMakerConfig',
       'min_budget_spend_percentage' => 'string',
       'multi_event_conversion_attribution_window_seconds' => 'int',
       'multi_optimization_goal_weight' => 'string',

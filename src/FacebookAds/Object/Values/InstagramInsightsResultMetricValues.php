@@ -43,6 +43,8 @@ class InstagramInsightsResultMetricValues extends AbstractEnum {
   const TOTAL_COMMENTS = 'total_comments';
   const TOTAL_INTERACTIONS = 'total_interactions';
   const TOTAL_LIKES = 'total_likes';
+  const TOTAL_VIEWERS = 'total_viewers';
   const TOTAL_VIEWS = 'total_views';
+  const VIEWERS = 'viewers';
   const VIEWS = 'views';
 }
