@@ -36,13 +36,13 @@ class SimpleRequest extends Request{
    */
   public function __construct(Client $client) {
     parent::__construct($client);
-    //Setting the curl options inside the client to avoid SSL certificates usage
+    // Use cURL's default TLS behavior, which validates the remote host's
+    // certificate, instead of disabling peer verification.
     $client -> getAdapter()->setOpts( new \ArrayObject(array(
         CURLOPT_CONNECTTIMEOUT => 10,
         CURLOPT_TIMEOUT => 60,
         CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_HEADER => true,
-        CURLOPT_SSL_VERIFYPEER => 0)));
+        CURLOPT_HEADER => true)));
   }
 
   /**
